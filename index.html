@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Task-13 (JS)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #3f3f41;
+      padding: 20px;
+    }
+    .question{
+      background-color: #f0eeee;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 20px;
+      box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      color: #dd1818cd;
+    }
+    p {
+      color: #000000;
+    }
+    #q1{background-image: url(1.jpg);
+
+    }
+    #q2{ background-image: url(2.avif);
+        background-size: cover;
+      } 
+      
+      
+        #q3{
+            background-image: url(3.jpg);
+        }
+        #q4{
+            background-image: url(images.jpeg);
+        }
+        .color4{
+            color: black;
+        }
+    #q5{
+        background-image: url(2.webp);
+    }
+    
+  </style>
+</head>
+<body>
+
+  <!-- Question 1 -->
+  <div class="question" id="q1">
+    <h2 > 1. Write a program to print your name and address.</h2>
+    <p id="output1"></p>
+  </div>
+
+  <!-- Question 2 -->
+  <div class="question" id="q2">
+    <h2 class="color">2. Write a program to check whether value and data-type of two variable are same.</h2>
+    <p id="output2"></p>
+  </div>
+
+  <!-- Question 3 -->
+  <div class="question" id="q3">
+    <h2>3. Write a program to add two strings and return them with all alphabet capital.</h2>
+    <p id="output3"></p>
+  </div>
+
+  <!-- Question 4 -->
+  <div class="question" id="q4">
+    <h2 class="color4">4. Write a JavaScript program to convert the length of a given string in bytes.</h2>
+    <p id="output4"></p>
+  </div>
+
+  <!-- Question 5 -->
+  <div class="question" id="q5">
+    <h2>5. Write a JavaScript program to round a number to a specified amount of digits.</h2>
+    <p id="output5"></p>
+  </div>
+
+  <script>
+    // Question 1
+    const name = "Anshu Singh";
+    const address = "Gali no. XYZ, Code-828XXX";
+    document.getElementById("output1").textContent = `Name: ${name}, Address: ${address}`;
+
+    // Question 2
+    let a = 5;
+    let b = 3;
+    let areSame = a === b;
+    document.getElementById("output2").textContent = `Are value and type same? ${areSame} (a=${a}, b=${b})`;
+
+    // Question 3
+    let str1 = "web";
+    let str2 = "development";
+    let combined = (str1 + str2).toUpperCase();
+    document.getElementById("output3").textContent = `Combined Uppercase String: ${combined}`;
+
+    // Question 4
+    let inputString = "Web Development";
+    function stringToBytes(str) {
+      return new TextEncoder().encode(str).length;
+    }
+    let byteLength = stringToBytes(inputString);
+    document.getElementById("output4").textContent = `Byte length of "${inputString}": ${byteLength} bytes`;
+
+    // Question 5
+    let num = 123.456789;
+    let digits = 3;
+    let rounded = num.toFixed(digits);
+    document.getElementById("output5").textContent = `Number ${num} rounded to ${digits} digits is: ${rounded}`;
+  </script>
+</body>
+</html>
